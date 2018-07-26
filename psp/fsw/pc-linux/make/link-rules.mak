@@ -18,7 +18,7 @@ CORE_INSTALL_FILES = $(EXE_TARGET)
 ##
 ## Linker flags that are needed
 ##
-LDFLAGS = -m32 -Wl,-export-dynamic
+LDFLAGS =  -Wl,-export-dynamic
 
 ##
 ## Libraries to link in
@@ -39,4 +39,4 @@ $(EXE_TARGET): $(CORE_OBJS)
 ## Application Link Rule
 ##
 $(APPTARGET).$(APP_EXT): $(OBJS)
-	$(COMPILER) -m32 -shared -o $@ $(OBJS) 
+	$(COMPILER)  -shared -o $@ $(OBJS) 

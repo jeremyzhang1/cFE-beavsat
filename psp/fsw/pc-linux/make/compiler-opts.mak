@@ -30,7 +30,7 @@ ENDIAN_DEFS=-D_EL -DENDIAN=_EL -DSOFTWARE_LITTLE_BIT_ORDER
 ##
 ## Compiler Architecture Switches
 ## 
-ARCH_OPTS = -m32
+ARCH_OPTS = 
 
 ##
 ## Application specific compiler switches 
@@ -86,7 +86,7 @@ CP=cp
 ##
 COMPILER=gcc
 ASSEMBLER=as
-LINKER=ld -melf_i386 
+LINKER=ld  
 AR=ar
 NM=nm
 SIZE=size

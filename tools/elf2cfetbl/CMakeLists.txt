@@ -30,7 +30,7 @@ file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/inc_stubs/psp_version.h
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/inc_stubs)
 
 # force build as 32-bit
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ")
 add_executable(elf2cfetbl elf2cfetbl.c)
 
 install(TARGETS elf2cfetbl DESTINATION host)

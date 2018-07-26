@@ -32,7 +32,7 @@ TARGET_DEFS = -D__ix86__ -D_ix86_ -D_LINUX_OS_ -DHWARCH=x86 -Dx86 -Dlinux -DX86P
 ##
 ## Architecture / debug defines
 ## 
-ARCH_DEFS = -m32 -g
+ARCH_DEFS =  -g
 
 ## 
 ## Endian Defines
