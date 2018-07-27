@@ -4,3 +4,8 @@ Build sample app
 
 Request from GNC/ACDS:
 Make app that gets GPS data and output it for the photo.
+
+Notes from the meeting 07/22
+We do not have GPS on the cubesat.
+Keep the app short and simple, use few apps.
+We need a power budget from the power team.
