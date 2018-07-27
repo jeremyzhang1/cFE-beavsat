@@ -11,6 +11,6 @@ Keep the app short and simple, use few apps.
 We need a power budget from the power team.
 
 What are we working on?
-Austin - Health app
+Austin - Telemetry Gather
 Jeremy - 
 Stanley - Payload camera app/interface, Design for some board
