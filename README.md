@@ -13,7 +13,12 @@ To setup cFS directly from the latest release:
 ## Build and Run
 
 The latest release include sample applications and an example build target that uses the pc-linux platform support package (should run on most Linux distributions).
-
+To run under Raspian on Raspberry Pi:
+	
+	cd scripts
+	./pi_make_cfs.sh
+	cd ../build/cpu1/exe
+	sudo ./core-linux.bin
 To compile and run:
 
     . ./setvars
