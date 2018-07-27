@@ -1,0 +1,3 @@
+Stuff we need to do today:
+Figure out cFS
+Build sample app
