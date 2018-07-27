@@ -1,0 +1,6 @@
+Stuff we need to do today:
+Figure out cFS
+Build sample app
+
+Request from GNC/ACDS:
+Make app that gets GPS data and output it for the photo.
