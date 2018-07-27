@@ -25,6 +25,8 @@
 #include "to_lab_msgids.h"
 
 #include "sample_app_msgids.h"
+#include "temp_io_msgids.h"
+#include "temp_mon_msgids.h"
 
 #if 0
 #include "sc_msgids.h"

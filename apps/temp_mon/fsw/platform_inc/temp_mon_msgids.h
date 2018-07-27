@@ -21,12 +21,12 @@
 #define _TEMP_MON_MSGIDS_H_
 
 /***** TODO:  These Message ID values are default and may need to be changed by the developer  *****/
-#define TEMP_MON_CMD_MID            	0x18C0
-#define TEMP_MON_SEND_HK_MID        	0x18C1
-#define TEMP_MON_WAKEUP_MID        	0x18D0
-#define TEMP_MON_OUT_DATA_MID        	0x18D1
+#define TEMP_MON_CMD_MID            	0x18E0
+#define TEMP_MON_SEND_HK_MID        	0x18E1
+#define TEMP_MON_WAKEUP_MID        	0x18F0
+#define TEMP_MON_OUT_DATA_MID        	0x18F1
 
-#define TEMP_MON_HK_TLM_MID		0x08BB
+#define TEMP_MON_HK_TLM_MID		0x08CC
 
     
 
