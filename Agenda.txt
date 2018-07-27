@@ -9,3 +9,8 @@ Notes from the meeting 07/22
 We do not have GPS on the cubesat.
 Keep the app short and simple, use few apps.
 We need a power budget from the power team.
+
+What are we working on?
+Austin - Health app
+Jeremy - 
+Stanley - Payload camera app/interface, Design for some board
