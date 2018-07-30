@@ -12,5 +12,12 @@ We need a power budget from the power team.
 
 What are we working on?
 Austin - Telemetry Gather
-Jeremy - 
+Jeremy - Assisting with the telemetry gathering app
 Stanley - Payload camera app/interface, Design for some board
+
+July 30:
+Prototype or get done the telemetry app. We can send the data from this app to other apps that need it
+Over the course of the week, we will work with other subsystems to create apps.
+We can make a template for the other subsystems, easier for other teams to get their programming done.
+Needs:
+Power and thermal safe ranges for the safety monitor app.
