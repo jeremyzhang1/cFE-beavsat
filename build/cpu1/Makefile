@@ -41,7 +41,7 @@
 # List of apps/libs to include in the build
 THE_APPS := sample_lib sample_app
 THE_APPS += ci_lab to_lab sch_lab picam pisatz_hwlib
-THE_APPS += telemetry_reader
+THE_APPS += telem_r
 # THE_APPS += cfs_lib
 # THE_APPS += cf cs ds fm hk hs lc md mm sc sch
 export THE_APPS

@@ -13,3 +13,4 @@
 Event Messages,            EventMessage.py,         0x808,   null
 Executive Services,        GenericTelemetry.py,     0x800,   cfe-es-hk-tlm.txt
 Table services,            GenericTelemetry.py,     0x804,   cfe-tbl-hk-tlm.txt
+Telemetry Reader,          GenericTelemetry.py,     0x8FB,   cfs-telemetry-reader-hk.txt

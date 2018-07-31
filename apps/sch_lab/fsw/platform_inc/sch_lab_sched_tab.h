@@ -25,9 +25,7 @@
 #include "to_lab_msgids.h"
 
 #include "sample_app_msgids.h"
-#include "temp_io_msgids.h"
-#include "temp_mon_msgids.h"
-
+#include "telem_r_msgids.h"
 #if 0
 #include "sc_msgids.h"
 #include "hs_msgids.h"
@@ -73,6 +71,8 @@ SCH_LAB_ScheduleTable_t SCH_LAB_ScheduleTable[SCH_LAB_MAX_SCHEDULE_ENTRIES] =
      { CI_LAB_SEND_HK_MID,   4, 0 },
      { TO_LAB_SEND_HK_MID,   4, 0 },
      { SAMPLE_APP_SEND_HK_MID,   4, 0 },
+     /* new Apps */
+     { TELEM_R_WAKEUP_MID, 1, 0},
 
 #if 0
      { SC_SEND_HK_MID,       4, 0 },
@@ -83,7 +83,8 @@ SCH_LAB_ScheduleTable_t SCH_LAB_ScheduleTable[SCH_LAB_MAX_SCHEDULE_ENTRIES] =
      { LC_SEND_HK_MID,       4, 0 },
 
 #endif
-
+     /*NEW APPS*/
+     { TELEM_R_SEND_HK_MID, 1, 0},
      { SCH_LAB_END_OF_TABLE, 0, 0 }
 };
 

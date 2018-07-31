@@ -28,3 +28,4 @@ Time Services (CPU1),       cfe__time__msg_8h,  0x1805, LE, UdpCommands.py,  127
 Event Services (CPU1),      cfe__evs__msg_8h,   0x1801, LE, UdpCommands.py,  127.0.0.1,   1234
 Command Ingest LAB,         ci_lab_msg,         0x1884, LE, UdpCommands.py,  127.0.0.1,   1234
 Telemetry Output LAB,       to_lab_msg,         0x1880, LE, UdpCommands.py,  127.0.0.1,   1234
+Telemetry Reader,           telemetry_reader_msg, 0x18FF, LE, UdpCommands.py, 127.0.0.1,  1234

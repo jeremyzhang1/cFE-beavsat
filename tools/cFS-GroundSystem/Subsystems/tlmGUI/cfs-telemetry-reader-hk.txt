@@ -1,0 +1,2 @@
+Command Counter, 12, 1, B, Dec, NULL, NULL. NULL, NULL
+Cmd Err Counter, 13, 1, B, Dec, NULL, NULL, NULL, NULL

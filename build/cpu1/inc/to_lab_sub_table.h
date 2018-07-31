@@ -25,7 +25,7 @@
 #include "ci_lab_msgids.h"
 
 #include "sample_app_msgids.h"
-#include "telemetry_reader_msgids.h"
+#include "telem_r_msgids.h"
 
 #if 0
 #include "hs_msgids.h"
@@ -52,7 +52,7 @@ static TO_subsciption_t  TO_SubTable[] =
             {LC_HK_TLM_MID,         {0,0},  4},
 #endif
 	    /* new apps */
-	    {TELEMETRY_READER_HK_TLM_MID, {0, 0}, 4},
+	    {TELEM_R_HK_TLM_MID, {0, 0}, 4},
 
             /* cFE Core subsciptions */
             {CFE_ES_HK_TLM_MID,     {0,0},  4},

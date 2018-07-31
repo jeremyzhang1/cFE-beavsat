@@ -1,0 +1,14 @@
+#cfs-telemetry-reader-hk.txt
+#
+#This file should have the following comma delimeted fields
+#1. Data item description
+#2. Offset of data item in packet (in bytes)
+#3. Size of data item (in bytes)
+#4. Python Data type of item (using Python struct library)
+#5 display type of item (Dec, Hex, Str, Enm)
+#6. Display string for enumerated value 0
+#7. Display string for enumerated value 1
+#8. Display string for enumerated value 2
+#9. Display string for enumerated value 3
+Command Counter, 12, 1, B, Dec, NULL, NULL, NULL, NULL
+Cmd Err Counter, 13, 1, B, Dec, NULL, NULL, NULL, NULL
