@@ -21,3 +21,8 @@ Over the course of the week, we will work with other subsystems to create apps.
 We can make a template for the other subsystems, easier for other teams to get their programming done.
 Needs:
 Power and thermal safe ranges for the safety monitor app.
+
+July 31:
+We are still working on the app for telemetry. We ran into many errors yesterday.
+Today, we will create the block diagram to define the system architecture and help the other subsystems get their apps implemented.
+Still need safe ranges for the different things.
