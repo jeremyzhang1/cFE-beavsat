@@ -40,11 +40,11 @@
 #include <string.h>
 
 #include "cfe.h"
-
 #include "telem_r_platform_cfg.h"
 #include "telem_r_mission_cfg.h"
 #include "telem_r_app.h"
 
+#include "wiringPiI2C.h"
 /*
 ** Local Defines
 */
@@ -61,7 +61,11 @@
 ** Global Variables
 */
 TELEM_R_AppData_t  g_TELEM_R_AppData;
+int mag_id;
+int accel_gyro_thermo_id;
 
+int accel_gyro_thermo_address = 0x6A;
+int mag_address =  0x1C;
 /*
 ** Local Variables
 */
@@ -538,7 +542,7 @@ int32 TELEM_R_RcvMsg(int32 iBlocking)
                 TELEM_R_ProcessNewData();
 
                 /* TODO:  Add more code here to handle other things when app wakes up */
-
+		printf("We have woken up!");
                 /* The last thing to do at the end of this Wakeup cycle should be to
                    automatically publish new output. */
                 TELEM_R_SendOutData();
@@ -1035,6 +1039,8 @@ void TELEM_R_AppMain()
         CFE_ES_WaitForStartupSync(TELEM_R_TIMEOUT_MSEC);
         CFE_ES_PerfLogEntry(TELEM_R_MAIN_TASK_PERF_ID);
     }
+    printf("Started Running");
+    
 
     /* Application main loop */
     while (CFE_ES_RunLoop(&g_TELEM_R_AppData.uiRunStatus) == TRUE)

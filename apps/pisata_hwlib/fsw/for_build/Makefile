@@ -9,17 +9,17 @@
 #
 # Subsystem produced by this makefile
 #
-APPTARGET = telem_r
+APPTARGET = pisata_hwlib
 
 # 
 # Entry Point for task
 # 
-ENTRY_PT = TELEM_R_AppMain
+ENTRY_PT = PISATA_LibInit
 
 #
 # Object files required to build subsystem.
 #
-OBJS = telem_r_app.o 
+OBJS = pisata_hwlib.o lsm9ds1_lib.o lsm9ds1.o
 
 #
 # Source files required to build subsystem; used to generate dependencies.
@@ -30,7 +30,7 @@ SOURCES = $(OBJS:.o=.c)
 #
 # Specify extra C Flags needed to build this subsystem
 #
-LOCAL_COPTS = 
+LOCAL_COPTS =
 
 #
 # EXEDIR is defined here, just in case it needs to be different for a custom build
@@ -44,7 +44,8 @@ EXEDIR=../exe
 # following:
 #    -R../tst_lib/tst_lib.elf
 #
-SHARED_LIB_LINK = 
+SHARED_LIB_LINK =
+
 
 #======================================================================================
 # Should not have to change below this line, except for customized mission and cFE
@@ -79,15 +80,17 @@ include $(CFE_PSP_SRC)/$(PSP)/make/compiler-opts.mak
 # If this subsystem needs include files from another app, add the path here.
 #
 INCLUDE_PATH = -I$(OSAL_SRC)/inc \
-               -I$(CFE_CORE_SRC)/inc \
-               -I$(CFE_PSP_SRC)/inc \
-               -I$(CFE_PSP_SRC)/$(PSP)/inc \
-               -I$(CFS_APP_SRC)/inc \
-               -I$(CFS_APP_SRC)/$(APPTARGET)/fsw/src \
-               -I$(CFS_APP_SRC)/$(APPTARGET)/fsw/tables \
-               -I$(CFS_MISSION_INC) \
-               -I../cfe/inc \
-               -I../inc 
+		-I$(CFE_CORE_SRC)/inc \
+		-I$(CFE_PSP_SRC)/inc \
+		-I$(CFE_PSP_SRC)/$(PSP)/inc \
+		-I$(CFS_APP_SRC)/inc \
+		-I$(CFS_APP_SRC)/$(APPTARGET)/fsw/src \
+	    -I$(CFS_APP_SRC)/$(APPTARGET)/public_inc \
+		-I$(CFS_APP_SRC)/$(APPTARGET)/fsw/tables \
+		-I$(CFS_MISSION_INC) \
+		-I../cfe/inc \
+		-I../inc \
+		-I/opt/vc/include 
 
 #
 # Define the VPATH make variable. 
@@ -96,8 +99,9 @@ INCLUDE_PATH = -I$(OSAL_SRC)/inc \
 # or if the mission chooses to put the src in another directory such as "src", then that
 # can be added here as well.
 #
+
 VPATH = $(CFS_APP_SRC)/$(APPTARGET)/fsw/src \
-        $(CFS_APP_SRC)/$(APPTARGET)/fsw/tables 
+		$(CFS_APP_SRC)/$(APPTARGET)/fsw/tables
 
 #
 # Include the common make rules for building a cFE Application
@@ -105,4 +109,3 @@ VPATH = $(CFS_APP_SRC)/$(APPTARGET)/fsw/src \
 include $(CFE_CORE_SRC)/make/app-rules.mak
 
 #######################################################################################
-    
