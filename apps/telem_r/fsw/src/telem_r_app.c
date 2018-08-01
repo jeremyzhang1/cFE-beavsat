@@ -45,6 +45,7 @@
 #include "telem_r_app.h"
 
 #include "wiringPiI2C.h"
+#include "lsm9ds1.h"
 /*
 ** Local Defines
 */
@@ -73,7 +74,8 @@ int mag_address =  0x1C;
 /*
 ** Local Function Definitions
 */
-    
+
+
 /*=====================================================================================
 ** Name: TELEM_R_InitEvent
 **
@@ -1039,9 +1041,8 @@ void TELEM_R_AppMain()
         CFE_ES_WaitForStartupSync(TELEM_R_TIMEOUT_MSEC);
         CFE_ES_PerfLogEntry(TELEM_R_MAIN_TASK_PERF_ID);
     }
-    printf("Started Running");
-    
-
+    printf("Started Running"); 
+    LSM9DS1_HwInit();
     /* Application main loop */
     while (CFE_ES_RunLoop(&g_TELEM_R_AppData.uiRunStatus) == TRUE)
     {
