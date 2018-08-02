@@ -62,11 +62,9 @@
 ** Global Variables
 */
 TELEM_R_AppData_t  g_TELEM_R_AppData;
-int mag_id;
-int accel_gyro_thermo_id;
 
-int accel_gyro_thermo_address = 0x6A;
-int mag_address =  0x1C;
+LSM9DS1_Vector_t mag_data;
+LSM9DS1_Vector_t accel_data;
 /*
 ** Local Variables
 */
@@ -544,9 +542,12 @@ int32 TELEM_R_RcvMsg(int32 iBlocking)
                 TELEM_R_ProcessNewData();
 
                 /* TODO:  Add more code here to handle other things when app wakes up */
-		printf("We have woken up!");
+		
                 /* The last thing to do at the end of this Wakeup cycle should be to
                    automatically publish new output. */
+		mag_data = LSM9DS1_GetMagData();
+		accel_data = LSM9DS1_GetAccelData();
+		g_TELEM_R_AppData.OutData;
                 TELEM_R_SendOutData();
                 break;
 

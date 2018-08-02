@@ -19,8 +19,8 @@ ENTRY_PT = TELEM_R_AppMain
 #
 # Object files required to build subsystem.
 #
-OBJS = telem_r_app.o 
-
+OBJS = telem_r_app.o
+OBJS += lsm9ds1.o
 #
 # Source files required to build subsystem; used to generate dependencies.
 # As long as there are no assembly files this can be automated.

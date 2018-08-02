@@ -57,6 +57,14 @@ typedef struct
 {
     uint8   ucTlmHeader[CFE_SB_TLM_HDR_SIZE];
     uint32  uiCounter;
+    
+    float magX;
+    float magY;
+    float magZ;
+
+    float accelX;
+    float accelY;
+    float accelZ;
 } TELEM_R_OutData_t;
 
 /* TODO:  Add more private structure definitions here, if necessary. */
