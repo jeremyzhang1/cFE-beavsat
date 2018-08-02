@@ -26,3 +26,7 @@ July 31:
 We are still working on the app for telemetry. We ran into many errors yesterday.
 Today, we will create the block diagram to define the system architecture and help the other subsystems get their apps implemented.
 Still need safe ranges for the different things.
+
+Aug 2:
+INFORMATION ON BOARD DESIGN:
+  Both boson cameras connected via USB. Pi will have constant 3.3V power. I2C bus connected to all sensors.
