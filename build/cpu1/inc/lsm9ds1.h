@@ -10,6 +10,7 @@
 #ifndef _lsm9ds1_h_
 #define _lsm9ds1_h_
 
+#include "wiringPiI2C.h"
 // Local error/success return codes
 #define LSM9DS1_OK 0
 #define LSM9DS1_FAIL -1

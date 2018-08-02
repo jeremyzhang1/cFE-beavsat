@@ -44,7 +44,7 @@
 #include "telem_r_mission_cfg.h"
 #include "telem_r_app.h"
 
-#include "wiringPiI2C.h"
+#include <wiringPiI2C.h>
 #include "lsm9ds1.h"
 /*
 ** Local Defines
@@ -545,9 +545,11 @@ int32 TELEM_R_RcvMsg(int32 iBlocking)
 		
                 /* The last thing to do at the end of this Wakeup cycle should be to
                    automatically publish new output. */
-		mag_data = LSM9DS1_GetMagData();
-		accel_data = LSM9DS1_GetAccelData();
-		g_TELEM_R_AppData.OutData;
+		//mag_data = LSM9DS1_GetMagData();
+		//accel_data = LSM9DS1_GetAccelData();
+		//g_TELEM_R_AppData.OutData.magX = mag_data.x;
+		//g_TELEM_R_AppData.OutData.magY = mag_data.y;
+		//g_TELEM_R_AppData.OutData.magZ = mag_data.z;
                 TELEM_R_SendOutData();
                 break;
 
@@ -577,6 +579,8 @@ int32 TELEM_R_RcvMsg(int32 iBlocking)
 ** Name: TELEM_R_ProcessNewData
 **
 ** Purpose: To process incoming data subscribed by TELEM_R application
+**
+** Arguments:
 **
 ** Arguments:
 **    None
@@ -1042,8 +1046,9 @@ void TELEM_R_AppMain()
         CFE_ES_WaitForStartupSync(TELEM_R_TIMEOUT_MSEC);
         CFE_ES_PerfLogEntry(TELEM_R_MAIN_TASK_PERF_ID);
     }
-    printf("Started Running"); 
-    LSM9DS1_HwInit();
+    printf("Started Running");
+    wiringPiI2CSetup(0xc1); 
+    //LSM9DS1_HwInit();
     /* Application main loop */
     while (CFE_ES_RunLoop(&g_TELEM_R_AppData.uiRunStatus) == TRUE)
     {
@@ -1056,8 +1061,6 @@ void TELEM_R_AppMain()
     /* Exit the application */
     CFE_ES_ExitApp(g_TELEM_R_AppData.uiRunStatus);
 } 
-    
-/*=======================================================================================
-** End of file telem_r_app.c
+   /* 
 **=====================================================================================*/
     
