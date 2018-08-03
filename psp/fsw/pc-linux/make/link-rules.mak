@@ -24,6 +24,7 @@ LDFLAGS =  -Wl,-export-dynamic
 ## Libraries to link in
 ##
 LIBS =  -lm -lpthread -ldl -lrt
+LIBS += -lwiringPi
 ##
 ## Uncomment the following line to link in C++ standard libs
 ## LIBS += -lstdc++

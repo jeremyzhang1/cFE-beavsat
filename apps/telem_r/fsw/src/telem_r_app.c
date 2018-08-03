@@ -545,11 +545,32 @@ int32 TELEM_R_RcvMsg(int32 iBlocking)
 		
                 /* The last thing to do at the end of this Wakeup cycle should be to
                    automatically publish new output. */
+<<<<<<< HEAD
+		//Adds mag data to send out for other apps to use
+		mag_data = LSM9DS1_GetMagData();
+		accel_data = LSM9DS1_GetAccelData();
+		g_TELEM_R_AppData.OutData.magX = mag_data.x;
+		g_TELEM_R_AppData.OutData.magY = mag_data.y;
+		g_TELEM_R_AppData.OutData.magZ = mag_data.z;
+		g_TELEM_R_AppData.OutData.accelX = accel_data.x;
+		g_TELEM_R_AppData.OutData.accelY = accel_data.y;
+		g_TELEM_R_AppData.OutData.accelZ = accel_data.z;
+
+		//Also adds the data to housekeeping for debug at least
+		g_TELEM_R_AppData.HkTlm.magX = mag_data.x;
+		g_TELEM_R_AppData.HkTlm.magY = mag_data.y;
+		g_TELEM_R_AppData.HkTlm.magZ = mag_data.z;
+		g_TELEM_R_AppData.HkTlm.accelX = accel_data.x;
+		g_TELEM_R_AppData.HkTlm.accelY = accel_data.y;
+		g_TELEM_R_AppData.HkTlm.accelZ = accel_data.z;
+
+=======
 		//mag_data = LSM9DS1_GetMagData();
 		//accel_data = LSM9DS1_GetAccelData();
 		//g_TELEM_R_AppData.OutData.magX = mag_data.x;
 		//g_TELEM_R_AppData.OutData.magY = mag_data.y;
 		//g_TELEM_R_AppData.OutData.magZ = mag_data.z;
+>>>>>>> 1ce54f7e728253a9ee6f579efccabd32cb875f51
                 TELEM_R_SendOutData();
                 break;
 

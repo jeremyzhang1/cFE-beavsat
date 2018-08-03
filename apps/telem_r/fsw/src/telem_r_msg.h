@@ -48,6 +48,13 @@ typedef struct
     uint8              usCmdCnt;
     uint8              usCmdErrCnt;
 
+    float magX;
+    float magY;
+    float magZ;
+    float accelX;
+    float accelY;
+    float accelZ;
+
     /* TODO:  Add declarations for additional housekeeping data here */
 
 } TELEM_R_HkTlm_t;
