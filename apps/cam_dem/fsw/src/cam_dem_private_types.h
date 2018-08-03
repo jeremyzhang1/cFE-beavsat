@@ -1,24 +1,24 @@
 /*=======================================================================================
-** File Name:  telem_r_private_types.h
+** File Name:  cam_dem_private_types.h
 **
-** Title:  Type Header File for TELEM_R Application
+** Title:  Type Header File for CAM_DEM Application
 **
 ** $Author:    Austin Cosby
 ** $Revision: 1.1 $
-** $Date:      2018-07-30
+** $Date:      2018-08-03
 **
-** Purpose:  This header file contains declarations and definitions of all TELEM_R's private
+** Purpose:  This header file contains declarations and definitions of all CAM_DEM's private
 **           data structures and data types.
 **
 ** Modification History:
 **   Date | Author | Description
 **   ---------------------------
-**   2018-07-30 | Austin Cosby | Build #: Code Started
+**   2018-08-03 | Austin Cosby | Build #: Code Started
 **
 **=====================================================================================*/
     
-#ifndef _TELEM_R_PRIVATE_TYPES_H_
-#define _TELEM_R_PRIVATE_TYPES_H_
+#ifndef _CAM_DEM_PRIVATE_TYPES_H_
+#define _CAM_DEM_PRIVATE_TYPES_H_
 
 /*
 ** Pragmas
@@ -40,7 +40,7 @@
 typedef struct
 {
     uint8  ucCmdHeader[CFE_SB_CMD_HDR_SIZE];
-} TELEM_R_NoArgCmd_t;
+} CAM_DEM_NoArgCmd_t;
 
 
 typedef struct
@@ -51,23 +51,13 @@ typedef struct
     **        devices or data subscribed from other apps' output data.
     */
 
-} TELEM_R_InData_t;
+} CAM_DEM_InData_t;
 
 typedef struct
 {
     uint8   ucTlmHeader[CFE_SB_TLM_HDR_SIZE];
     uint32  uiCounter;
-    
-    float magX;
-    float magY;
-    float magZ;
-
-    float accelX;
-    float accelY;
-    float accelZ;
-    
-    int thermoTemp;
-} TELEM_R_OutData_t;
+} CAM_DEM_OutData_t;
 
 /* TODO:  Add more private structure definitions here, if necessary. */
 
@@ -87,9 +77,9 @@ typedef struct
 ** Local Function Prototypes
 */
 
-#endif /* _TELEM_R_PRIVATE_TYPES_H_ */
+#endif /* _CAM_DEM_PRIVATE_TYPES_H_ */
 
 /*=======================================================================================
-** End of file telem_r_private_types.h
+** End of file cam_dem_private_types.h
 **=====================================================================================*/
     
